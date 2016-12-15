@@ -1,0 +1,18 @@
+function res = is2peak(h)
+n = length(h);
+c = 0;
+for i=1:n-2
+    if h(i)<h(i+1)&h(i+1)>h(i+2)
+        c = c+1;
+        if c>2
+            res = 0;
+            return;
+        end
+    end
+end
+if c<2
+    res = 0;
+else
+    res = 1;
+end
+end
